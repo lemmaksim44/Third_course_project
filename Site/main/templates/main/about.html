@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="container-film">
+        <div class="image">
+            <img src="{{ cinema.image.url }}" width="100%" height="100%">
+        </div>
+        <div class="about_film">
+            <div class="about_film_main">
+                <h3>{{ cinema.title }}</h3>
+                <p>Жанр: {{ cinema.genre }}</p>
+                <p>Страна: {{ cinema.country }}</p>
+                <p>Режиссер: {{ cinema.director }}</p>
+                <p>Актеры: {{ cinema.actors }}</p>
+                <p>Время: {{ cinema.duration }}</p>
+                <p>Возрастное ограничение: {{ cinema.age_limit }}</p>
+                <div class="line"></div>
+                <h3>Описание:</h3>
+                <p id="film-text">{{ cinema.description }}</p>
+                <div class="line"></div>
+                <h3>Сеансы на сегодня:</h3>
+            </div>
+            <div class="time-film">
+                {% if cinema.timetable_set.all %}
+                    {% for ti in cinema.timetable_set.all %}
+                        {% if ti.time > date_time %}
+                            <a href="{% url 'hall' ti.id_timetable %}">
+                                <div class="time-button">
+                                    {{ ti.time }}
+                                </div>
+                            </a>
+                        {% else %}
+                            <div class="no-time-button">
+                                {{ ti.time }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <div class="no-time">
+                        <p>Cеансов на фильм пока нет</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

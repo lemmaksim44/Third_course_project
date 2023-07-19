@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="container-film">
+    <div class="info-header"><h3>Информация о нас</h3></div>
+    <div class="info">
+        <div class="info-container">
+            <div class="info-header-content"><p>Телефоны</p></div>
+            <p>По поводу рекламы - +79997654321</p>
+            <p>По любой информации - +79991234567</p>
+        </div>
+    </div>
+    <div class="info-mail">
+        <div class="info-header-content"><p>Напишите нам</p></div>
+        <form method="post">
+            <div class="info-mail-container">
+            {% csrf_token %}
+            <div class="info-mail-post"><p>ФИО: {{ form.name }}</p></div>
+            <div class="info-mail-post"><p>Email: {{ form.email }}</p></div>
+            <p>{{ form.text }}</p>
+            <button type="submit" class="button-info">Отправить</button><br>
+            </div>
+        </form>
+    </div>
+    <div class="map_fon">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.282811191466!2d127.53542916672562!3d50.26797781434209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5e8940d8ce07f90d%3A0xc89619cef17c81f!2z0JzQtdCz0LA!5e0!3m2!1sru!2sru!4v1649591406923!5m2!1sru!2sru"
+                width="820" height="190" style="border:0; border-radius: 30px;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="footer-block"></div>
+    </div>
+</div>
+{% endblock %}
+

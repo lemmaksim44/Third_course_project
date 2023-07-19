@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="register">
+        <form method="post">
+            {% csrf_token %}
+            <div class="register-text">
+                <h3>Регистрация</h3>
+                <p id="phone-register">Номер телефона: {{ form.username }}</p>
+                <p id="pass-register">Пароль: {{ form.password }}</p>
+                <p>Повторите пароль: {{ form.password2 }}</p>
+            </div>
+            <div class="register-error">
+                <span>{{ form.username.errors }}</span>
+                <span>{{ form.password2.errors }}</span>
+            </div>
+            <div class="register-button">
+                <button type="submit" class="button-registration">Зарегестрировать</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

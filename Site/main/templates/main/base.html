@@ -1,0 +1,50 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Best Cinema</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&family=Rubik+Glitch&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="page">
+        <header>
+            <div class="logo">
+                <a href="/main">
+                    <img src="{% static 'main/image/logo.png' %}">
+                </a>
+            </div>
+            <div class="menu">
+                <div class="menu-container">
+                    <div class="emptiness"></div>
+                    <div class="menu-main">
+                        <div class="menu-button"><a class="menu-link" href="/main">РАСПИСАНИЕ</a></div>
+                        <div class="menu-button"><a class="menu-link" href="/contacts">КОНТАКТЫ</a></div>
+                    </div>
+                    <div class="menu-account">
+                        {% if user.is_authenticated %}
+                            <div class="menu-button"><a class="menu-link" href="../account/profile">ВОЙТИ</a></div>
+                        {% else %}
+                            <div class="menu-button"><a class="menu-link" href="../account/login">ВОЙТИ</a></div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            {% block body %}
+            {% endblock %}
+        </div>
+
+    </div>
+
+</body>
+</html>

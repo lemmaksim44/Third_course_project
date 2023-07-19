@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="container">
+{% if cinema %}
+    {% for cin in cinema %}
+        <a href="{% url 'about' cin.id_cinema %}">
+            <div class="film">
+                <div class="posters">
+                    <img src="{{ cin.image.url }}" width="200" height="320">
+                </div>
+                <div class="posters_block">
+                    <div class="posters_text">
+                        <p>{{ cin.title }}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+{% else %}
+    <p style="font-size: 36px;">Фильмы закончились</p>
+{% endif %}
+</div>
+
+{% endblock %}

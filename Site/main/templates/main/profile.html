@@ -1,0 +1,64 @@
+{% extends 'main/base.html' %}
+
+{% block body %}
+<div class="container">
+    {% if user.is_authenticated %}
+        <div class="profile-menu">
+            <div class="profile-menu-container">
+                <div class="profile-menu-text-left">Личный кабинет</div>
+                <div class="profile-menu-text-right">{{ user.username }} |</div>
+                <div class="profile-menu-text-right"><a href="../account/logout"><div class="button-LogOut">Выйти</div></a></div>
+            </div>
+        </div>
+        <div class="profile-session">
+            <div class="profile-menu-container">
+                <div class="session">Актуальные сеансы</div>
+                    {% for data in book %}
+                        {% if data.phone_number == user.username and data.date == today%}
+                            <div class="info-session-container">
+                                <div class="info-session-container-name"><p>Фильм: {{ data.id_timetable }}</p></div>
+                                <div class="info-session-container-left">
+                                    <p>Дата: {{ data.date }}</p>
+                                    <p>Цена: {{ data.id_timetable.price }} руб.</p>
+                                    <p>Место показа: {{ data.id_timetable.id_hall }}</p>
+                                </div>
+                                <div class="info-session-container-right">
+                                    <p>Время: {{ data.id_timetable.time }}</p>
+                                    <p>Ряд: {{ data.row }}</p>
+                                    <p>Место: {{ data.place }}</p>
+                                </div>
+                                <a href="{% url 'delete' data.id_booking %}">
+                                    <div class="info-session-container-delete">
+                                        <p>Отменить запись</p>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+            </div>
+        </div>
+        <div class="profile-session">
+            <div class="profile-menu-container">
+                <div class="session">Все посещенные сеансы</div>
+                    {% for data in book %}
+                        {% if data.phone_number == user.username and data.date != today %}
+                            <div class="info-session-container">
+                                <div class="info-session-container-name"><p>Фильм: {{ data.id_timetable }}</p></div>
+                                <div class="info-session-container-left">
+                                    <p>Дата: {{ data.date }}</p>
+                                    <p>Цена: {{ data.id_timetable.price }} руб.</p>
+                                    <p>Место показа: {{ data.id_timetable.id_hall }}</p>
+                                </div>
+                                <div class="info-session-container-right">
+                                    <p>Время: {{ data.id_timetable.time }}</p>
+                                    <p>Ряд: {{ data.row }}</p>
+                                    <p>Место: {{ data.place }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

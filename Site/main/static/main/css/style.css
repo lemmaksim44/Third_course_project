@@ -1,0 +1,714 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    background: url('../image/fon.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-color: #FFFFFF;
+    overflow: auto;
+}
+
+
+a,a:visited{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+.logo{
+    height: 120px;
+    line-height: 120px;
+    background: #03002E;
+    text-align: center;
+}
+
+
+.menu-container{
+    max-width: 900px;
+    width: 100%;
+    padding: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.menu{
+    height: 50px auto;
+    line-height: 50px auto;
+    background-color: #03004E;
+}
+
+
+.menu{
+    text-align: center;
+}
+
+
+.emptiness{
+    display: inline-block;
+    max-width: 140px;
+    width: 100%;
+}
+
+
+.menu-main{
+    display: inline-block;
+    max-width: 600px;
+    width: 100%;
+    word-spacing: 10px;
+}
+
+
+.menu-account{
+    display: inline-block;
+    max-width: 140px;
+    width: 100%;
+}
+
+
+.menu-button{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border-radius: 30px;
+    font-family: 'Rubik Glitch', cursive;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #6456B9;
+}
+
+
+h1,h2,h3,p{
+    color: #FFFFFF;
+}
+
+
+.container{
+    max-width: 900px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/* index.html */
+
+.film{
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 400px;
+    margin: 10px;
+    background-color: rgba(46,14,81,0.8);
+    border-radius: 30px;
+}
+
+
+.posters{
+    width: 200px;
+    height: 320px;
+}
+
+
+.posters img{
+    border-radius: 30px 30px 0px 0px;
+}
+
+
+.posters_block{
+    width: 200px;
+    height: 60px;
+    text-align: center;
+}
+
+
+.posters_text{
+    font-size: 14px;
+}
+
+
+/* login.html */
+
+.login{
+    width: 400px;
+    height: 300px;
+    background-color: rgba(46,14,81,0.8);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+
+
+#pass {
+    margin-left: 6.5px;
+}
+
+
+.login-text{
+    padding-top: 7px;
+    width: 400px;
+    height: 160px;
+    vertical-align: center;
+    color: #FFFFFF;
+}
+
+
+.login-error{
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 400px;
+    height: 30px;
+}
+
+
+.login-button{
+    line-height: 25px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 400px;
+    height: 100px;
+}
+
+
+.button-register{
+    margin-top: 10px;
+    border-radius: 30px;
+    width: 130px;
+    height: 25px;
+    line-height: 20px;
+    font-size: 16px;
+    background: #6456B9;
+    color: #FFFFFF;
+}
+
+
+/* register.html */
+
+
+.register{
+    width: 450px;
+    height: 370px;
+    background-color: rgba(46,14,81,0.8);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+
+
+.register-text{
+    padding-top: 7px;
+    width: 450px;
+    height: 200px;
+}
+
+
+.register-error{
+    padding-top: 10px;
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 450px;
+    height: 100px;
+}
+
+
+.register-button{
+    width: 450px;
+    height: 50px;
+}
+
+
+#phone-register{
+    margin-left: 16px;
+}
+
+
+#pass-register{
+    margin-left: 102px;
+}
+
+
+.button-registration{
+    border-radius: 30px;
+    width: 180px;
+    height: 25px;
+    font-size: 16px;
+    background: #6456B9;
+    color: #FFFFFF;
+}
+
+
+/* profile.html */
+
+
+.profile-menu{
+    max-width: 900px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(46,14,81,0.8);
+    border-radius: 30px;
+    text-align: right;
+}
+
+
+.profile-menu-container{
+    width:820px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+}
+
+
+.profile-menu-text-left{
+    display: inline-block;
+    color: #FFFFFF;
+    margin-top: 12px;
+    float: left;
+}
+
+
+.profile-menu-text-right{
+    display: inline-block;
+    color: #FFFFFF;
+    margin-top: 12px;
+}
+
+
+.button-LogOut{
+    padding: 10px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    background: #6456B9;
+    border-radius: 30px;
+}
+
+
+.profile-session{
+    max-width: 900px;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(46,14,81,0.8);
+    border-radius: 30px;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+
+.profile-session::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+.session{
+    display: block;
+    width: 800px;
+    height: 40px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.info-session-container{
+    display: inline-block;
+    width: 400px;
+    background-color: rgba(74,50,110,0.6);
+    margin-top: 10px;
+    border-radius: 30px;
+    margin: 2px;
+    margin-top: 5px;
+}
+
+
+.info-session-container-name{
+    display: block;
+    width: 400px;
+}
+
+
+.info-session-container-left{
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+.info-session-container-right{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+.info-session-container-delete{
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(240,0,0,0.8);
+    border-radius: 0px 0px 30px 30px;
+}
+
+
+/* about.html */
+
+
+.container-film{
+    width: 900px;
+    background-color: rgba(46,14,81,0.7);
+    border-radius: 30px;
+}
+
+
+.image{
+    max-width: 300px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.image img{
+    border-radius: 30px;
+}
+
+
+.about_film{
+    max-width: 550px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+#film-text{
+    line-height: 22px;
+}
+
+
+.about_film_main{
+    font-size: 18px;
+    line-height: 16px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+
+.line{
+    width: 100%;
+    height: 3px;
+    background: #6456B9;
+}
+
+
+.no-time{
+    padding-left: 10px;
+}
+
+
+.time-film{
+    text-align: left;
+}
+
+
+.time-button{
+    display: inline-block;
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    background:#6456B9;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 10px;
+}
+
+
+.no-time-button{
+    display: inline-block;
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    background: #03002E;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 10px;
+}
+
+
+/* hall.html */
+
+.cinema-hall{
+    display: inline-block;
+    max-width: 600px;
+    width: 100%;
+    height: 400px;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.cinema-amount-row{
+    display: inline-block;
+    width: 80px;
+    vertical-align: top;
+}
+
+
+.cinema-amount-row-text{
+    margin-top: 36px;
+}
+
+
+.cinema-amount-row-text-block{
+    display: inline-block;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    text-align: top;
+    vertical-align: bottom;
+    margin: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+
+.cinema-hall-group{
+    display: inline-block;
+}
+
+
+.cinema-screen{
+    max-width: 490px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    background: #FFFFFF;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+.cinema-group{
+    margin-top: 40px;
+}
+
+
+.cinema-place{
+    display: inline-block;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    text-align: top;
+    vertical-align: bottom;
+    background: #6456B9;
+    margin: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+
+.cinema-place-middle{
+    position: relative;
+    z-index: 10;
+    bottom: 56.5px;
+    right: 2px;
+}
+
+
+.no-cinema-place{
+    display: inline-block;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    text-align: top;
+    vertical-align: bottom;
+    background: #F00000;
+    margin: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+
+.reservation{
+    display: inline-block;
+    width: 270px;
+    height: 400px;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.8);
+    vertical-align: top;
+}
+
+
+.reservation-text{
+    text-align: center;
+    width: 270px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 8px;
+    margin-top: 15px;
+}
+
+
+.reservation-test-form{
+    width: 270px;
+    height: 170px;
+    font-size: 16px;
+    line-height: 8px;
+    margin-top: 30px;
+}
+
+
+.reservation-text-error{
+    width: 270px;
+    height: 60px;
+    line-height: 60px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+
+.reservation-button-place{
+    width: 270px;
+    height: 60px;
+}
+
+
+.button{
+    margin-top: 15px;
+    border-radius: 30px;
+    width: 180px;
+    height: 25px;
+    line-height: 20px;
+    font-size: 16px;
+    background: #6456B9;
+    color: #FFFFFF;
+}
+
+
+/* contacts.html */
+
+
+.info-header{
+    width: 900px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0px;
+}
+
+
+.info{
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    background-color: rgba(74,50,110,0.6);
+    margin-top: 0;
+    border-radius: 30px;
+}
+
+
+.info-header-content{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0px;
+    text-align: center;
+}
+
+
+.info-container{
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+}
+
+
+.info-mail{
+    display: inline-block;
+    background-color: rgba(74,50,110,0.6);
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+
+.info-mail-container{
+    width: 450px;
+    height: 220px;
+    margin: 20px;
+    margin-top: 0px;
+    font-size: 16px;
+}
+
+
+.info-mail-post{
+    display: inline-block;
+    width: 220px;
+    height: 50px;
+}
+
+
+.textarea{
+    width: 435.5px;
+    height: 100px;
+    resize: none;
+}
+
+
+.button-info{
+
+    border-radius: 30px;
+    width: 180px;
+    height: 25px;
+    line-height: 20px;
+    font-size: 16px;
+    background: #6456B9;
+    color: #FFFFFF;
+}
+
+
+.map_fon{
+    width: 830px;
+    height: 200px;
+    background-color: rgba(74,50,110,0.6);
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+
+.map{
+    padding-top: 5px;
+}
+
+
+.footer-block{
+    width: 100%;
+    height: 30px;
+}

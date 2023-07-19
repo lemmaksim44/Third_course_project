@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="login">
+        <form method="post">
+            {% csrf_token %}
+            <div class="login-text">
+                <h3>Войти</h3>
+                <p>&emsp;Логин: {{ form.username }}</p>
+                <p id="pass">Пароль: {{ form.password }}</p>
+            </div>
+            <div class="login-error">
+                <span>{{ error }}</span>
+            </div>
+            <div class="login-button">
+                <button type="submit" class="button">Войти</button><br>
+                <button class="button-register"><a class="menu-link" href="../account/register">Регистрация</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

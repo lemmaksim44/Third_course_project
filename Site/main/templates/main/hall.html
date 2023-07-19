@@ -1,0 +1,74 @@
+{% extends 'main/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <h2>{{ time.id_cinema.title }}</h2>
+    <div class="cinema-hall">
+        <div class="cinema-amount-row">
+            <p>Ряд:</p>
+            <div class="cinema-amount-row-text">
+                {% for row in row|rjust:time.id_hall.amount_row %}
+                    <div class="cinema-amount-row-text-block">
+                        <p>{{ forloop.counter }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="cinema-hall-group">
+            <div class="cinema-screen">Экран</div>
+            <div class="cinema-group">
+                {% for row1 in range_row  %}
+                    <div class="cinema-row">
+                        {% for place1 in range_place %}
+                            {% if book %}
+                                <div class="cinema-place">
+                                    <p>{{ place1 }}</p>
+                                    <div class="cinema-place-middle">
+                                        {% for bo in book %}
+                                            {% if bo.row == row1 and bo.place == place1 %}
+                                                <div class="no-cinema-place">
+                                                    <p>{{ place1 }}</p>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="cinema-place">
+                                    <p>{{ place1 }}</p>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="reservation">
+        <div class="reservation-text">
+            <p>Место показа: {{ time.id_hall.name_hall }}</p>
+            <p>Время показа: {{ time.time }}</p>
+            <p>Цена билета: {{ time.price }} руб.</p>
+        </div>
+            <form method="post">
+                {% csrf_token %}
+                <div class="reservation-test-form">
+                <p>Введите номер телефона:</p>
+                {{ form.phone_number }}
+                <p>Введите номер ряда:</p>
+                {{ form.row }}
+                <p>Введите номер места:</p>
+                {{ form.place }}
+                </div>
+                <div class="reservation-text-error">
+                    <span>{{ error }}</span>
+                </div>
+                <div class="reservation-button-place">
+                    <button type="submit"  class="button">Забронировать</button>
+                </div>
+            </form>
+    </div>
+</div>
+
+{% endblock %}
